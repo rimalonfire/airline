@@ -11,9 +11,10 @@ public class Database{
    public Database() {
         
         try{
+	   Class.forName("com.mysql.jdbc.Driver");
            dcon=DriverManager.getConnection(DB_URL, USER, PASS);
            System.out.println("connected");
-        } catch (SQLException e){
+        } catch (Exception e){
             e.printStackTrace();
         }
         
