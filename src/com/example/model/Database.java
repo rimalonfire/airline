@@ -23,5 +23,20 @@ public class Database{
    public Connection getConnection(){
        return dcon;
    }
+   public void Close(){
+
+	if(dcon!=null){
+try{
+dcon.close();
+     
+}catch(SQLException se){
+se.printStackTrace();
+}
+           
+}
+
+
+
+  }
      
 } 
